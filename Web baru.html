@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus Autonomous</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://maps.googleapis.com/maps/api/js?key="272004"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+  <!-- Header with Logo and Website Name -->
+  <header class="app-header">
+    <div class="logo-container">
+      <img src="Gambar.jpg" alt="Logo" class="logo">
+      <h1 class="website-name">4TangMove</h1>
+    </div>
+        <div class="datetime">
+          <p id="date"></p>
+          <p id="time"></p>
+        </div>
+      </div>
+    </header>
+  <main>
+    <section id="map" class="section visible">
+      <h2>Pelacakan Posisi Bus</h2>
+      <div id="mapContainer"></div>
+    </section>
+
+    <section id="route" class="section hidden">
+      <h2>Simulasi Rute</h2>
+      <p>Rute bus akan ditampilkan di sini.</p>
+    </section>
+
+    <section id="stops" class="section hidden">
+      <h2>Halte Terdekat</h2>
+      <p>Informasi halte terdekat Anda.</p>
+    </section>
+
+    <section id="payment" class="section hidden">
+      <h2>Pembayaran QRIS</h2>
+      <p>Scan kode QR berikut untuk membayar perjalanan Anda:</p>
+      <img src="Qris.jpg" alt="Logo" class="logo">
+      <div id="qris-container"></div>
+    </section>
+  </main>
+
+  <!-- Bottom Navigation Bar -->
+  <footer class="bottom-nav">
+    <button class="nav-item" onclick="showSection('map')">🗺️<span>Pelacakan</span></button>
+    <button class="nav-item" onclick="showSection('route')">🚌<span>Rute</span></button>
+    <button class="nav-item" onclick="showSection('stops')">📍<span>Halte</span></button>
+    <button class="nav-item" onclick="showSection('payment')">💳<span>Pembayaran</span></button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
